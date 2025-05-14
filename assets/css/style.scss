@@ -1,0 +1,331 @@
+@import "./blocks/_footer";
+@import "./blocks/_header";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+$red: #f53838;
+$white: #ffff;
+$dark: #0b132a;
+$grey: #4f5665;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.button {
+  border: 1px solid $red;
+  padding: 13px 45px;
+  border-radius: 50px;
+  color: $red;
+  background: none;
+  transition: all 0.5s ease;
+  text-align: center;
+  &:hover {
+    color: $white;
+    background: $red;
+  }
+}
+.button-active {
+  color: $white;
+  background: $red;
+  &:hover {
+    color: $red;
+    background: none;
+  }
+}
+.bold {
+  font-weight: 700;
+}
+.bold-500 {
+  font-weight: 500;
+}
+.minRadius {
+  border-radius: 10px;
+}
+
+.hero {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 10px;
+  img {
+    max-width: 580px;
+  }
+  &__header {
+    color: $dark;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 140%;
+    margin: 0 0 20px;
+  }
+  &__description {
+    color: $grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 187%;
+    margin: 0 0 50px;
+  }
+  &__button {
+    box-shadow: 0px 15px 40px #f538545b;
+  }
+}
+
+.advantages {
+  padding: 72px 91px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 95px;
+  box-shadow: 0px 50px 50px rgba(128, 128, 128, 0.123);
+  &__item {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+  &__header {
+    font-size: 25px;
+    line-height: 120%;
+    color: $dark;
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 150%;
+    color: $grey;
+  }
+  &__hr {
+    height: 125px;
+    width: 2px;
+    background-color: #eeeff2;
+  }
+}
+
+.features {
+  display: flex;
+  gap: 158px;
+  align-items: center;
+  margin-bottom: 126px;
+  &__header {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 143%;
+    color: $dark;
+    margin: 0 0 20px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 187%;
+    color: $grey;
+    margin: 0 0 20px;
+  }
+  &__list {
+    ul li {
+      font-size: 14px;
+      line-height: 214%;
+      color: $grey;
+      padding: 0 10px;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 22px;
+        height: 20px;
+        background-image: url("../img/marker.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.wrapper {
+  background: url(../img/plans-bg.png);
+  padding: 80px 0 0;
+}
+.plans {
+  margin-bottom: 150px;
+  padding: 0 10px;
+  &__header,
+  &__description {
+    text-align: center;
+  }
+  &__header {
+    font-size: 35px;
+    line-height: 143%;
+    margin-bottom: 20px;
+    color: $dark;
+  }
+  &__description {
+    max-width: 555px;
+    margin: 0 auto;
+    color: $grey;
+  }
+  &__cards {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    gap: 50px;
+  }
+  &__card {
+    padding: 79px 68px 50px;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    &-img {
+      margin: 0 0 30px;
+      transform: translate(10%, 0);
+    }
+    &-header {
+      font-size: 18px;
+      line-height: 167%;
+      text-align: center;
+      color: $dark;
+      margin-bottom: 30px;
+    }
+    &-list {
+      margin-bottom: 130px;
+      li {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 10px;
+        color: $grey;
+      }
+    }
+    &-price {
+      font-size: 25px;
+      line-height: 120%;
+      text-align: center;
+      color: $dark;
+      margin-bottom: 20px;
+    }
+    &-button {
+      display: block;
+      margin: 0 auto;
+    }
+    &-active {
+      border: 2px solid $red;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.geography {
+  text-align: center;
+  margin-bottom: 50px;
+  &__header {
+    font-size: 35px;
+    line-height: 143%;
+    margin-bottom: 20px;
+    color: $dark;
+    max-width: 383px;
+    margin: 0 auto 20px;
+  }
+  &__description {
+    max-width: 555px;
+    margin: 0 auto 155px;
+    color: $grey;
+  }
+  &__map {
+    margin-bottom: 35px;
+  }
+}
+
+.reviews {
+  margin-bottom: 136px;
+  &__blocks {
+    display: flex;
+    gap: 50px;
+    margin: 0 0 60px 150px;
+  }
+  &__header {
+    text-align: center;
+    font-size: 35px;
+    line-height: 143%;
+    margin-bottom: 20px;
+    color: $dark;
+    max-width: 383px;
+    margin: 0 auto 20px;
+  }
+  &__description {
+    text-align: center;
+    max-width: 555px;
+    margin: 0 auto 60px;
+    color: $grey;
+  }
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      gap: 15px;
+      max-height: 15px;
+    }
+    &-right {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  &__review {
+    max-width: 400px;
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-people {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 0 0 20px;
+    }
+    &-active {
+      border: 2px solid $red;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.sub-wrapper {
+  background: url(../img/plans-bg.png);
+}
+.subscribe {
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #ffff;
+    transform: translate(0, -50%);
+    padding: 58px 70px;
+    box-shadow: 0px 50px 50px rgba(128, 128, 128, 0.123);
+  }
+  &__header {
+    font-size: 35px;
+    line-height: 129%;
+    max-width: 371px;
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 187%;
+    color: $grey;
+  }
+}
